@@ -1,0 +1,12 @@
+{
+  "APP_LANGUE": "App en Français",
+  "TITLE": "App avec traduction locale",
+  "DESCRIPTION": "Cette App permet de gérer les traductions locales",
+  "NOT_DEFINE": " Texte non traduit",
+  "ADD": "Ajouter",
+  "LOGIN": "Se Connecter",
+  "PASSWORD": "Mot de Passe",
+  "WELCOME": "Bienvenue !",
+  "WELCOME2": "Vos informations",
+  "WHATYOUWANT": "Vous désirez ?"
+}

@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#ffffff'
     },
     title: {
 
@@ -11,13 +12,15 @@ export default StyleSheet.create({
     logo: {
         flex: 1,
         height: 120,
-        width: 90,
+        width: 308,
         alignSelf: "center",
         margin: 30
     },
     input: {
         height: 48,
-        borderRadius: 5,
+        borderRadius: 32,
+        borderColor: '#01aef0',
+        borderWidth: 1,
         overflow: 'hidden',
         backgroundColor: 'white',
         marginTop: 10,
@@ -27,14 +30,20 @@ export default StyleSheet.create({
         paddingLeft: 16
     },
     button: {
-        backgroundColor: '#788eec',
+        backgroundColor: '#01aef0',
         marginLeft: 30,
         marginRight: 30,
         marginTop: 20,
         height: 48,
-        borderRadius: 5,
+        borderRadius: 32,
         alignItems: "center",
-        justifyContent: 'center'
+        justifyContent: 'center',
+        shadowColor: 'rgba(0,0,0, 0.9)', // IOS
+        shadowOffset: { height: 1, width: 1 }, // IOS
+        shadowOpacity: 1, // IOS
+        shadowRadius: 1, //IOS
+        flexDirection: 'row',
+        elevation: 5 // Android  
     },
     buttonTitle: {
         color: 'white',
@@ -51,7 +60,7 @@ export default StyleSheet.create({
         color: '#2e2e2d'
     },
     footerLink: {
-        color: "#788eec",
+        color: "#01aef0",
         fontWeight: "bold",
         fontSize: 16
     }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FlatList, Keyboard, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import styles from './styles';
 import { firebase } from '../../firebase/config'
+import { translate } from "../../translations/local";
 
 export default function HomeScreen(props) {
 
@@ -10,6 +11,7 @@ export default function HomeScreen(props) {
 
     const entityRef = firebase.firestore().collection('entities')
     const userID = props.extraData.id
+    const groupID = props.extraData.group
 
     useEffect(() => {
         entityRef
@@ -66,7 +68,7 @@ export default function HomeScreen(props) {
             <View style={styles.formContainer}>
                 <TextInput
                     style={styles.input}
-                    placeholder='Add new entity'
+                    placeholder={translate("APP_LANGUE")}
                     placeholderTextColor="#aaaaaa"
                     onChangeText={(text) => setEntityText(text)}
                     value={entityText}
@@ -74,7 +76,7 @@ export default function HomeScreen(props) {
                     autoCapitalize="none"
                 />
                 <TouchableOpacity style={styles.button} onPress={onAddButtonPress}>
-                    <Text style={styles.buttonText}>Add</Text>
+                    <Text style={styles.buttonText}>{translate("ADD")}</Text>
                 </TouchableOpacity>
             </View>
             { entities && (
